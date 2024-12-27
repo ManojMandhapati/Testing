@@ -12,6 +12,9 @@
 
 
 # Calculator
+
+on = True
+
 def add():
     a = float(input("Enter a number. "))
     b = float(input("Enter another number. "))
@@ -31,15 +34,17 @@ def devide():
     a = float(input("Enter a number. "))
     b = float(input("Enter another number. "))
     print(a/b)
-
-operator = input("Please type +, -, *, or / ")
-if operator == '+':
-    add()
-elif operator == '-':
-    subtraction()
-elif operator == '*':
-    multiply()
-elif operator == '/':
-    devide()
-else:
-    print("Operation is not avilable")
+while on:
+    operator = input("Please type +, -, *, /, or q ")
+    if operator == '+':
+        add()
+    elif operator == '-':
+        subtraction()
+    elif operator == '*':
+        multiply()
+    elif operator == '/':
+        devide()
+    elif operator == 'q':
+        on = False
+    else:
+        print("Operation is not avilable")
